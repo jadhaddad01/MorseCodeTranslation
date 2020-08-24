@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class MorseCode{
+	//basic english alphabet
 	static String a = ".-";
 	static String b = "-...";
 	static String c = "-.-.";
@@ -27,6 +28,8 @@ public class MorseCode{
 	static String x = "-..-";
 	static String y = "-.--";
 	static String z = "--..";
+
+	//european extra
 	static String uTwoDots = "..--";
 	static String aTwoDots = ".-.-";
 	static String oTwoDots = "---.";
@@ -34,6 +37,8 @@ public class MorseCode{
 	static String eAccentAigu = "..-..";
 	static String eAccentGrave = ".-..-";
 	static String aAccentGrave = ".--.-";
+
+	//num
 	static String num1 = ".----";
 	static String num2 = "..---";
 	static String num3 = "...--";
@@ -44,6 +49,8 @@ public class MorseCode{
 	static String num8 = "---..";
 	static String num9 = "----.";
 	static String num0 = "-----";
+
+	//complex chars
 	static String plus = ".-.-.";
 	static String forwardSlash = "-..-.";
 	static String equal = "-...-";
@@ -69,6 +76,7 @@ public class MorseCode{
 				morseCoded = morseCoded + "  ";
 			}
 			else{
+				//english alphabet
 				if(char1 == 'a' || char1 == 'A'){
 					morseCoded = morseCoded + a + " ";
 				}
@@ -147,6 +155,105 @@ public class MorseCode{
 				if(char1 == 'z' || char1 == 'Z'){
 					morseCoded = morseCoded + z + " ";
 				}
+
+				//nums
+				if(char1 == '1'){
+					morseCoded = morseCoded + num1 + " ";
+				}
+				if(char1 == '2'){
+					morseCoded = morseCoded + num2 + " ";
+				}
+				if(char1 == '3'){
+					morseCoded = morseCoded + num3 + " ";
+				}
+				if(char1 == '4'){
+					morseCoded = morseCoded + num4 + " ";
+				}
+				if(char1 == '5'){
+					morseCoded = morseCoded + num5 + " ";
+				}
+				if(char1 == '6'){
+					morseCoded = morseCoded + num6 + " ";
+				}
+				if(char1 == '7'){
+					morseCoded = morseCoded + num7 + " ";
+				}
+				if(char1 == '8'){
+					morseCoded = morseCoded + num8 + " ";
+				}
+				if(char1 == '9'){
+					morseCoded = morseCoded + num9 + " ";
+				}
+				if(char1 == '0'){
+					morseCoded = morseCoded + num0 + " ";
+				}
+
+				//complex chars
+				if(char1 == '+'){
+					morseCoded = morseCoded + plus + " ";
+				}
+				if(char1 == '/'){
+					morseCoded = morseCoded + forwardSlash + " ";
+				}
+				if(char1 == '='){
+					morseCoded = morseCoded + equal + " ";
+				}
+				if(char1 == '?'){
+					morseCoded = morseCoded + questionMark + " ";
+				}
+				if(char1 == '_'){
+					morseCoded = morseCoded + underscore + " ";
+				}
+				if(char1 == '"'){
+					morseCoded = morseCoded + doubleAppostrophe + " ";
+				}
+				if(char1 == '.'){
+					morseCoded = morseCoded + point + " ";
+				}
+				if(char1 == '@'){
+					morseCoded = morseCoded + at + " ";
+				}
+				if(char1 == '\''){
+					morseCoded = morseCoded + appostrophe + " ";
+				}
+				if(char1 == '-'){
+					morseCoded = morseCoded + dash + " ";
+				}
+				if(char1 == ';'){
+					morseCoded = morseCoded + pointComma + " ";
+				}
+				if(char1 == '!'){
+					morseCoded = morseCoded + exclamation + " ";
+				}
+				if(char1 == ','){
+					morseCoded = morseCoded + comma + " ";
+				}
+				if(char1 == ':'){
+					morseCoded = morseCoded + twoDot + " ";
+				}
+
+				//european chars
+				if(char1 == 'ü' || char1 == 'Ü'){
+					morseCoded = morseCoded + uTwoDots + " ";
+				}
+				if(char1 == 'ä' || char1 == 'Ä'){
+					morseCoded = morseCoded + aTwoDots + " ";
+				}
+				if(char1 == 'ö' || char1 == 'Ö'){
+					morseCoded = morseCoded + oTwoDots + " ";
+				}
+				if(char1 == 'ç' || char1 == 'Ç'){
+					morseCoded = morseCoded + cAccentCirconflexe + " ";
+				}
+				if(char1 == 'é' || char1 == 'É'){
+					morseCoded = morseCoded + eAccentAigu + " ";
+				}
+				if(char1 == 'è' || char1 == 'È'){
+					morseCoded = morseCoded + eAccentGrave + " ";
+				}
+				if(char1 == 'à' || char1 == 'À'){
+					morseCoded = morseCoded + aAccentGrave + " ";
+				}
 			}
 		}
 
@@ -154,7 +261,7 @@ public class MorseCode{
 	}
 
 	public static void main(String[] args) {
-		String regularText = "jad is amazing!";
+		String regularText = "WOW this is amazing!";
 		System.out.println(encodeMorse(regularText));
 	}
 }
