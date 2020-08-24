@@ -260,8 +260,43 @@ public class MorseCode{
 		return morseCoded;
 	}
 
+	//Parsed spaces and words and now need to change them into english
+	public static String decodeMorse(String value){
+		String morseDecoded = "";
+		String valueParsed;
+		char char2;
+		valueParsed = value.replace("   ", "/");
+		valueParsed = valueParsed.replace(" ", ",");
+
+		String tmp = "";
+		for(int index1 = 0; index1 < valueParsed.length(); index1++){
+			char2 = valueParsed.charAt(index1);
+			System.out.println(char2);
+			if(index1 == valueParsed.length()-1) System.out.println("last one");
+
+			if(char2 == ','){
+
+			}
+			if(char2 == '/'){
+				morseDecoded += " ";
+			}
+		}
+
+
+		return morseDecoded;
+	}
+
 	public static void main(String[] args) {
-		String regularText = "WOW this is amazing!";
-		System.out.println(encodeMorse(regularText));
+		/*
+		if(args!=null){
+			for (int i = 0; i < args.length; i++) {
+				System.out.println(args[i]);
+			}
+		}
+		*/
+		String a = encodeMorse("This is amazing!");
+		System.out.println(decodeMorse(a));
+
+		
 	}
 }
